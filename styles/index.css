@@ -1,0 +1,1186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: white;
+}
+
+.nav {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav>.nav-header {
+    font-size: 32px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav>.nav-header span {
+    font-size: 40px;
+    color: #FF9898;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: #ff9898;
+    border-radius: 4px;
+}
+
+
+
+.nav>#nav-check {
+    display: none;
+}
+
+
+/* nav bar responsive design for large device */
+/* =======================================================LARGE==================================== */
+@media (max-width:1024px) {
+    .nav>.nav-header {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .nav>.nav-links>a {
+        padding: 13px 10px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+/* nav bar responsive design for tablet */
+/* =======================================================TABLET==================================== */
+@media (max-width:768px) {
+    .nav>.nav-header {
+        font-size: 26px;
+    }
+
+    .nav>.nav-links>a {
+        font-size: 16px;
+    }
+}
+
+/* navBar responsive for mobile */
+/* ======================================MOBILE============================================= */
+@media (max-width:640px) {
+    .nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav>.nav-header {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .nav>.nav-btn {
+        width: 22px;
+        height: 22px;
+        display: block;
+        margin-right: 10px;
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #ffffff;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 0px;
+        transition: all 0.5s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+/* ========================================================================= */
+/*                                 nav bar end                 
+/* ========================================================================= */
+
+/* body code start */
+/* ======================================= */
+/*                BANNER */
+/* ======================================= */
+.main-section {
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.home-banner {
+    margin: 150px 0;
+}
+
+.banner-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-details h3 {
+    font-size: 60px;
+    width: 650px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.banner-details p {
+    color: #9E9E9E;
+    text-align: center;
+    width: 500px;
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.banner-details button {
+    background: linear-gradient(92.51deg, #FF9898 0.48%, #8054FF 100%);
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.banner-image {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.banner-image img {
+    width: 70%;
+    border-radius: 20px;
+}
+
+/* BANNER RESPONSIVE IN LAPTOP DEVICE 1024PX */
+/* =============================================================== */
+@media (max-width: 1024px) {
+
+    .home-banner {
+        margin: 100px 0;
+    }
+
+    .banner-details h3 {
+        font-size: 50px;
+    }
+
+    .banner-details p {
+        margin: 20px 0;
+    }
+
+    .banner-details button {
+        font-size: 19px;
+    }
+}
+
+/* BANNER RESPONSIVE IN TABLET DEVICE 768PX */
+/* =============================================================== */
+@media (max-width: 768px) {
+
+    .home-banner {
+        margin: 50px 0;
+    }
+
+    .banner-details h3 {
+        font-size: 40px;
+        width: 450px;
+    }
+
+    .banner-details p {
+        margin: 10px 0;
+    }
+
+    .banner-details button {
+        font-size: 18px;
+    }
+}
+
+/* BANNER RESPONSIVE IN MOBILE DEVICE 640PX */
+/* =============================================================== */
+@media (max-width: 640px) {
+
+    .home-banner {
+        margin: 50px 0;
+    }
+
+    .banner-details h3 {
+        font-size: 40px;
+        width: 360px;
+    }
+
+    .banner-details p {
+        width: 300px;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .banner-details button {
+        font-size: 16px;
+    }
+
+    .banner-image img {
+        width: 90%;
+        border-radius: 10px;
+    }
+}
+
+/* ======================================= */
+/*                banner end */
+/* ======================================= */
+
+/* FEATURE SECTION DESIGN */
+.feature-title h3 {
+    font-size: 60px;
+}
+
+.feature-title p {
+    font-size: 18px;
+    color: #9E9E9E;
+    line-height: 28px;
+    width: 500px;
+}
+
+.features {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.feature {
+    background: #18181C;
+    border-radius: 20px;
+    padding: 60px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-icons {
+    margin-bottom: 10px;
+}
+
+.feature-icons>span {
+    font-size: 70px;
+    background: #222228;
+    padding: 30px;
+    border-radius: 10px;
+    color: #FF9898;
+}
+
+.feature h4 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.feature p {
+    color: #9E9E9E;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    max-width: 400px;
+}
+
+/* feature bottom design */
+.features-bottom-container {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    margin: 50px 0;
+}
+
+.features-img-box img {
+    width: 100%;
+}
+
+.features-bottom-container-details h3 {
+    font-size: 60px;
+    line-height: 55px;
+}
+
+.features-bottom-container-details p {
+    font-size: 18px;
+    color: #9E9E9E;
+    margin: 20px 0;
+}
+
+.features-bottom-container-details>div>button {
+    background: linear-gradient(92.51deg, #FF9898 0.48%, #8054FF 100%);
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+/* RESPONSIVE IN LAPTOP DEVICE 1024px */
+/* ============================================================= */
+@media (max-width: 1024px) {
+    .feature-title h3 {
+        font-size: 45px;
+    }
+
+    .feature-title p {
+        line-height: normal;
+    }
+
+    .features {
+        gap: 20px;
+    }
+
+    .feature {
+        padding: 30px 20px;
+    }
+
+    .feature-icons>span {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .feature h4 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .feature p {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    /* feature bottom design */
+    /* ----------------------------------- */
+    .features-bottom-container {
+        gap: 50px;
+    }
+
+    .features-img-box img {
+        width: 100%;
+    }
+
+    .features-bottom-container-details h3 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .features-bottom-container-details>div>button {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVE IN TABLET DEVICE 768px */
+/* ============================================================= */
+@media (max-width: 768px) {
+    .feature-title h3 {
+        font-size: 40px;
+    }
+
+    .feature-title p {
+        line-height: 18px;
+    }
+
+    .features {
+        gap: 20px;
+    }
+
+    .feature {
+        padding: 20px 10px;
+    }
+
+    .feature-icons>span {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .feature h4 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .feature p {
+        font-size: 14px;
+        line-height: normal;
+        max-width: 100%;
+    }
+
+    /* feature bottom design */
+
+    .features-bottom-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .features-img-box img {
+        width: 100%;
+    }
+
+    .features-bottom-container-details h3 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .features-bottom-container-details p {
+        margin: 10px 0;
+    }
+
+    .features-bottom-container-details>div>button {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVE IN MOBILE DEVICE 640px */
+/* ============================================================= */
+@media (max-width: 640px) {
+
+    .feature-title h3 {
+        font-size: 40px;
+    }
+
+    .feature-title p {
+        width: 320px;
+    }
+
+    .features {
+        margin: 50px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .feature {
+        padding: 40px 30px;
+    }
+
+    .feature-icons>span {
+        font-size: 60px;
+        /* background: #222228; */
+        padding: 20px;
+        border-radius: 10px;
+        /* color: #FF9898; */
+    }
+
+    .feature h4 {
+        font-size: 25px;
+        font-weight: 600;
+        /* margin: 15px 0; */
+    }
+
+    .feature p {
+        /* color: #9E9E9E; */
+        font-size: 22px;
+        line-height: 30px;
+        /* text-align: center; */
+        max-width: 100%;
+    }
+
+    /* feature bottom design */
+    .features-bottom-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 0;
+    }
+
+    .features-img-box img {
+        width: 100%;
+    }
+
+    .features-bottom-container-details h3 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .features-bottom-container-details>div>button {
+        font-size: 18px;
+    }
+}
+
+/* ======================================= */
+/*                feature */
+/* ======================================= */
+
+
+
+
+/* DESIGN IN FREE TRIAL SECTION */
+.free-trial-title {
+    background: #18181C;
+    padding: 100px 150px 300px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border-radius: 15px;
+}
+
+.free-trial-title>h3 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.free-trial-logo-icons {
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+}
+
+.free-trial-logo-icons>span {
+    background: #000000;
+    font-size: 28px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-family: 'Great Vibes';
+}
+
+/* bottom design */
+.free-trial-details {
+    background: linear-gradient(135.66deg, #FF9898 14.73%, #8054FF 86.33%);
+    max-width: 70%;
+    margin: -220px auto 0 auto;
+    border-radius: 10px;
+    padding: 100px 60px;
+}
+
+.free-trial-details h5 {
+    font-size: 20px;
+}
+
+.free-trial-details h3 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.free-trial-details button {
+    background: linear-gradient(92.51deg, #000000 0.48%, #14034994 100%);
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+/* RESPONSIVE IN TABLET DEVICE 1024px */
+/* ============================================================= */
+@media (max-width: 1024px) {
+    .free-trial-title {
+        padding: 100px 80px 220px 80px;
+    }
+
+    .free-trial-title>h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .free-trial-logo-icons {
+        gap: 14px;
+    }
+
+    .free-trial-logo-icons>span {
+        font-size: 30px;
+        padding: 15px 20px;
+    }
+
+    /* bottom design */
+    .free-trial-details {
+        margin: -180px auto 0 auto;
+        padding: 80px 40px;
+    }
+
+    .free-trial-details h5 {
+        font-size: 18px;
+    }
+
+    .free-trial-details h3 {
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .free-trial-details button {
+        font-size: 22px;
+    }
+}
+
+/* RESPONSIVE IN TABLET DEVICE 768px */
+/* ============================================================= */
+@media (max-width: 768px) {
+    .free-trial-title {
+        padding: 100px 80px 220px 80px;
+    }
+
+    .free-trial-title>h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .free-trial-logo-icons {
+        gap: 10px;
+    }
+
+    .free-trial-logo-icons>span {
+        font-size: 22px;
+        padding: 10px 15px;
+    }
+
+    /* bottom design */
+    .free-trial-details {
+        margin: -180px auto 0 auto;
+        padding: 80px 40px;
+    }
+
+    .free-trial-details h5 {
+        font-size: 16px;
+    }
+
+    .free-trial-details h3 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .free-trial-details button {
+        font-size: 22px;
+    }
+}
+
+/* RESPONSIVE IN MOBILE DEVICE 640px */
+/* ============================================================= */
+@media (max-width: 640px) {
+
+    .free-trial-container {
+        margin: 50px 0;
+    }
+
+    .free-trial-title {
+        padding: 50px 10px 200px 10px;
+        gap: 30px;
+    }
+
+    .free-trial-title>h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .free-trial-logo-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .free-trial-logo-icons>span {
+        background: #000000;
+        font-size: 18px;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-family: 'Great Vibes';
+    }
+
+    /* bottom design */
+    .free-trial-details {
+        margin: -140px auto 0 auto;
+        padding: 40px 30px;
+    }
+
+    .free-trial-details h5 {
+        font-size: 14px;
+    }
+
+    .free-trial-details h3 {
+        font-size: 22px;
+    }
+
+    .free-trial-details button {
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+
+
+/* LOGIN FORM DESIGN */
+/* ================================================================ */
+.login-form-container {
+    margin: 200px 0;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.login-form-banner {
+    width: 50%;
+}
+
+.login-form-banner img {
+    width: 100%;
+}
+
+.login-form-width-details {
+    width: 50%;
+}
+
+.form-details>h3 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.form-details>p {
+    font-size: 22px;
+    color: #9E9E9E;
+    line-height: 35px;
+}
+
+.form>input {
+    display: block;
+    margin: 20px 0;
+}
+
+.form>.input-field {
+    padding: 15px;
+    width: 100%;
+    background-color: #18181C;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.form-submit-btn {
+    background: linear-gradient(92.51deg, #FF9898 0.48%, #8054FF 100%);
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+/* RESPONSIVE IN MOBILE DEVICE 1024px */
+/* =================================================== */
+@media (max-width: 1024px) {
+    .login-form-container {
+        margin: 180px 0;
+    }
+
+    .form-details>h3 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .form-details>p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .form>input {
+        margin: 18px 0;
+    }
+
+    .form>.input-field {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .input-field-text-area {
+        height: 150px;
+    }
+
+    .form-submit-btn {
+        font-size: 18px;
+    }
+}
+
+/* RESPONSIVE IN MOBILE DEVICE 768px */
+/* =================================================== */
+@media (max-width: 768px) {
+    .login-form-container {
+        margin: 150px 0;
+    }
+
+    .form-details>h3 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .form-details>p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .form>input {
+        margin: 15px 0;
+    }
+
+    .form>.input-field {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .input-field-text-area {
+        height: 100px;
+    }
+
+    .form-submit-btn {
+        font-size: 16px;
+    }
+}
+
+/* RESPONSIVE IN MOBILE DEVICE 640px */
+/* =================================================== */
+@media (max-width: 640px) {
+    .login-form-container {
+        margin: 100px 0;
+    }
+
+    .login-form-banner {
+        display: none;
+    }
+
+    .login-form-width-details {
+        width: 100%;
+    }
+
+    .form-details>h3 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .form-details>p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+
+
+
+/* ============================================================================ */
+/*                               FOOTER DESIGN                                  */
+/* ============================================================================ */
+
+.footer {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+.footer-item-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.footer-item-1,
+.footer-item-2,
+.footer-item-3 {
+    border-right: 3px solid rgba(255, 255, 255, 0.596);
+    padding-right: 50px;
+    border-color: rgba(255, 255, 255, 0.336);
+    margin-right: 20px;
+}
+
+.footer-item-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-item-1 span {
+    font-size: 150px;
+    color: #8176AF;
+    padding: 10px;
+}
+
+.footer-item-2 ul li,
+.footer-item-3 ul li {
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.footer-item-4 h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.footer-social-icons div img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* footer btn */
+.footer-btn button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer-btn button {
+    align-items: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(#8176AF, #C0B7E8);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 100px;
+    border-width: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: CircularStd, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+}
+
+.footer-btn button:hover {
+    background-position: -20px -20px;
+}
+
+.footer-hr-line {
+    width: 80%;
+    margin: 100px auto 0 auto;
+    border-color: rgba(255, 255, 255, 0.322);
+}
+
+/* footer bottom */
+.footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* RESPONSIVE IN laptop DEVICE 768PX */
+/* ================================================== */
+@media (max-width: 1024px) {
+
+    .footer-item-1,
+    .footer-item-2,
+    .footer-item-3 {
+        padding-right: 20px;
+        margin-right: 10px;
+    }
+
+    .footer-item-1 span {
+        font-size: 130px;
+        padding: 10px;
+    }
+
+    .footer-item-2 ul li,
+    .footer-item-3 ul li {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .footer-item-4 h3 {
+        font-size: 14px;
+    }
+
+    .footer-social-icons {
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .footer-social-icons div img {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* footer btn */
+    .footer-btn button {
+        margin-top: 5px;
+    }
+
+    .footer-btn button {
+        border-radius: 80px;
+        font-size: 10px;
+        font-weight: 400;
+        padding: 6px 10px;
+    }
+
+}
+
+/* RESPONSIVE IN TABLET DEVICE 768PX */
+/* ================================================== */
+@media (max-width: 768px) {
+
+    .footer-item-1,
+    .footer-item-2,
+    .footer-item-3 {
+        padding-right: 20px;
+        margin-right: 10px;
+    }
+
+    .footer-item-1 span {
+        font-size: 120px;
+        color: #8176AF;
+        padding: 10px;
+    }
+
+    .footer-item-2 ul li,
+    .footer-item-3 ul li {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .footer-item-4 h3 {
+        font-size: 14px;
+    }
+
+    .footer-social-icons {
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .footer-social-icons div img {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* footer btn */
+    .footer-btn button {
+        margin-top: 5px;
+    }
+
+    .footer-btn button {
+        border-radius: 80px;
+        font-size: 10px;
+        font-weight: 400;
+        padding: 6px 10px;
+    }
+
+}
+
+/* RESPONSIVE IN MOBILE DEVICE 640PX */
+/* ================================================== */
+@media (max-width: 640px) {
+    .footer {
+        margin-top: 100px;
+    }
+
+    .footer-item-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-item-1 {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-item-1 span {
+        font-size: 350px;
+        color: #8176AF;
+        padding: 0;
+    }
+
+    .footer-item-2,
+    .footer-item-3 {
+        display: none;
+    }
+
+    .footer-item-4 {
+        text-align: center;
+    }
+
+    .footer-social-icons div img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-hr-line {
+        margin-top: 30px;
+    }
+
+    .footer-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
